@@ -22,6 +22,69 @@
 
   <link href="{{asset("themes/rapid/assets/css/style.css")}}" rel="stylesheet">
 </head>
+<style>
+  .explain .bubble{
+    position: absolute;
+    -webkit-animation-name: bubbleMover;
+    animation-name: bubbleMover;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-perspective: 400px;
+    perspective: 400px;
+}
+@-webkit-keyframes bubbleMover {
+        0% {
+            -webkit-transform: rotate3d(0, 1, 0, 15deg) translateY(0px) translateX(0px);
+                    transform: rotate3d(0, 1, 0, 15deg) translateY(0px) translateX(0px);
+        }
+        30% {
+            -webkit-transform: rotate3d(0, 0, 1, 20deg) translateY(10px) translateX(10px);
+                    transform: rotate3d(0, 0, 1, 20deg) translateY(10px) translateX(10px);
+        }
+        60% {
+            -webkit-transform: rotate3d(1, 0, 0, 15deg) translateY(20px) translateX(20px);
+                    transform: rotate3d(1, 0, 0, 15deg) translateY(20px) translateX(20px);
+        }
+        80% {
+            -webkit-transform: rotate3d(0, 0, 1, 20deg) translateY(10px) translateX(10px);
+                    transform: rotate3d(0, 0, 1, 20deg) translateY(10px) translateX(10px);
+        }
+        100% {
+            -webkit-transform: rotate3d(0, 1, 0, 15deg) translateY(0px) translateX(0px);
+                    transform: rotate3d(0, 1, 0, 15deg) translateY(0px) translateX(0px);
+        }
+    }
+
+    @keyframes  bubbleMover {
+        0% {
+            -webkit-transform: rotate3d(0, 1, 0, 15deg) translateY(0px) translateX(0px);
+                    transform: rotate3d(0, 1, 0, 15deg) translateY(0px) translateX(0px);
+        }
+        30% {
+            -webkit-transform: rotate3d(0, 0, 1, 20deg) translateY(10px) translateX(10px);
+                    transform: rotate3d(0, 0, 1, 20deg) translateY(10px) translateX(10px);
+        }
+        60% {
+            -webkit-transform: rotate3d(1, 0, 0, 15deg) translateY(20px) translateX(20px);
+                    transform: rotate3d(1, 0, 0, 15deg) translateY(20px) translateX(20px);
+        }
+        80% {
+            -webkit-transform: rotate3d(0, 0, 1, 20deg) translateY(10px) translateX(10px);
+                    transform: rotate3d(0, 0, 1, 20deg) translateY(10px) translateX(10px);
+        }
+        100% {
+            -webkit-transform: rotate3d(0, 1, 0, 15deg) translateY(0px) translateX(0px);
+                    transform: rotate3d(0, 1, 0, 15deg) translateY(0px) translateX(0px);
+        }
+    }
+  }
+</style>
 
 <body>
     @include('livewire.fronts.partials.header')
